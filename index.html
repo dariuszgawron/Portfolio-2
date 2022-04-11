@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.scss">
+
     <title>Document</title>
 </head>
 <body>
@@ -125,7 +134,8 @@
                         </div>
                     </div>
                     <button class="button about__button">
-                        Download CV <i></i>
+                        Download CV 
+                        <i class="fa-solid fa-download button__icon"></i>
                     </button>
                     <ul class="about-social__list">
                         <li class="about-social__list-item">
@@ -156,33 +166,103 @@
             <h1 class="section__title">
                 My resume
             </h1>
-            <div class="about__resume-container">
-                <div class="about__resume-data">
-                    <h3 class="about__title">
+            <div class="resume__container">
+                <div class="resume__content">
+                    <h3 class="resume__title">
                         Education
                     </h3>
-                    <div class="about__card">
-
-                    </div>
-                    <div class="about__card">
-
-                    </div>
-                    <div class="about__card">
-
+                    <div class="resume__group">
+                        <div class="resume__card">
+                            <span class="resume__card-tag">
+                                
+                            </span>
+                            <h4 class="resume__card-title">
+                                Diploma in web design
+                            </h4>
+                            <h5 class="resume__card-subtitle">
+                                Oxford University / 2013 - 2014
+                            </h5>
+                            <p class="resume__card-description">
+                                Porttitor eget dolor morbi non arcu risus. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus.
+                            </p>
+                        </div>
+                        <div class="resume__card">
+                            <span class="resume__card-tag">
+    
+                            </span>
+                            <h4 class="resume__card-title">
+                                Master of Science in Information Technology
+                            </h4>
+                            <h5 class="resume__card-subtitle">
+                                Oxford University / 2011 - 2013
+                            </h5>
+                            <p class="resume__card-description">
+                                Dui sapien eget mi proin sed libero enim sed faucibus. Senectus et netus et malesuada. Ornare arcu dui vivamus arcu felis.
+                            </p>
+                        </div>
+                        <div class="resume__card">
+                            <span class="resume__card-tag">
+                                
+                            </span>
+                            <h4 class="resume__card-title">
+                                Bachelor of Science in Information Technology
+                            </h4>
+                            <h5 class="resume__card-subtitle">
+                                Oxford University / 2008 - 2011
+                            </h5>
+                            <p class="resume__card-description">
+                                Ac odio tempor orci dapibus ultrices. Faucibus in ornare quam viverra orci sagittis eu volutpat odio.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="about__resume-data">
-                    <h3 class="about__title">
+                <div class="resume__content">
+                    <h3 class="resume__title">
                         Experience
                     </h3>
-                    <div class="about__card">
-
-                    </div>
-                    <div class="about__card">
-
-                    </div>
-                    <div class="about__card">
-                        
+                    <div class="resume__group">
+                        <div class="resume__card">
+                            <span class="resume__card-tag">
+                                
+                            </span>
+                            <h4 class="resume__card-title">
+                                Lead UI/UX designer
+                            </h4>
+                            <h5 class="resume__card-subtitle">
+                                Microsoft / 2019 - Current
+                            </h5>
+                            <p class="resume__card-description">
+                                Non arcu risus quis varius quam quisque id. Aliquam sem fringilla ut morbi tincidunt.
+                            </p>
+                        </div>
+                        <div class="resume__card">
+                            <span class="resume__card-tag">
+                                
+                            </span>
+                            <h4 class="resume__card-title">
+                                Senior UI/UX designer
+                            </h4>
+                            <h5 class="resume__card-subtitle">
+                                Google / 2017 - 2019
+                            </h5>
+                            <p class="resume__card-description">
+                                Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Posuere urna nec tincidunt praesent semper feugiat nibh.
+                            </p>
+                        </div>
+                        <div class="resume__card">
+                            <span class="resume__card-tag">
+                                
+                            </span>
+                            <h4 class="resume__card-title">
+                                Junior UI/UX designer
+                            </h4>
+                            <h5 class="resume__card-subtitle">
+                                Twitter / 2014 - 2017
+                            </h5>
+                            <p class="resume__card-description">
+                                A diam maecenas sed enim ut sem viverra aliquet eget. Condimentum mattis pellentesque id nibh tortor id.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,21 +274,49 @@
             <h1 class="section__title">
                 My skills
             </h1>
-            <div class="about__skills-container">
-                <div class="about__skills-data">
-                    <h3 class="about__title">
-                        Design skills
+            <div class="skills__container">
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        Design <span class="skills__title--primary">skills</span>
                     </h3>
-                    <div class="about__card">
+                    <div class="skills__group">
+                        <div class="skills__data">
 
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="about__skills-data">
-                    <h3 class="about__title">
-                        Coding skills
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        Coding <span class="skills__title--primary">skills</span> 
                     </h3>
-                    <div class="about__card">
-                        
+                    <div class="skills__group">
+                        <div class="skills__data">
+
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
+                        <div class="skills__data">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,80 +328,80 @@
             <h1 class="section__title">
                 My services
             </h1>
-            <p class="about__description">
+            <p class="services__description">
                 Fames ac turpis egestas sed tempus urna et pharetra. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Sollicitudin tempor id eu nisl nunc. 
             </p>
-            <div class="about__services-container">
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-
+            <div class="services__container">
+                <div class="services__card">
+                    <i class="fa-solid fa-laptop-code services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Web design
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-solid fa-palette services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Design
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-light fa-object-ungroup services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Product design
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-light fa-object-group services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        UI/UX design
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-solid fa-radiation services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Animation
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-solid fa-code services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Web development
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-solid fa-arrows-up-down-left-right services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Fully responsive
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
-                <div class="about__card">
-                    <i class="about__card-icon"></i>
-                    <h3 class="about__card-title">
-                        
+                <div class="services__card">
+                    <i class="fa-solid fa-dharmachakra services__card-icon"></i>
+                    <h3 class="services__card-title">
+                        Management
                     </h3>
-                    <p class="about__card-description">
-
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                     </p>
                 </div>
             </div>
@@ -305,21 +413,51 @@
             <h1 class="section__title">
                 My testimonial
             </h1>
-            <div class="about__testimonial-container">
-                <div class="about__card">
-                
+            <div class="testimonial__container">
+                <div class="testimonial__card">
+                    <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__card-img">
+                    <p class="testimonial__card-description">
+                        Tempus imperdiet nulla malesuada pellentesque. At tempor commodo ullamcorper a lacus vestibulum sed arcu.
+                    </p>
+                    <div class="testimonial__card-rating">
+
+                    </div>
                 </div>
-                <div class="about__card">
-                
+                <div class="testimonial__card">
+                    <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__card-img">
+                    <p class="testimonial__card-description">
+                        Imperdiet dui accumsan sit amet nulla. Hac habitasse platea dictumst quisque sagittis purus sit.
+                    </p>
+                    <div class="testimonial__card-rating">
+                        
+                    </div>
                 </div>
-                <div class="about__card">
-                
+                <div class="testimonial__card">
+                    <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__card-img">
+                    <p class="testimonial__card-description">
+                        Elementum nibh tellus molestie nunc non blandit massa enim nec. Tellus rutrum tellus pellentesque eu.
+                    </p>
+                    <div class="testimonial__card-rating">
+                        
+                    </div>
                 </div>
-                <div class="about__card">
-                
+                <div class="testimonial__card">
+                    <img src="assets/img/testimonial4.jpg" alt="" class="testimonial__card-img">
+                    <p class="testimonial__card-description">
+                        In est ante in nibh mauris. Tristique senectus et netus et malesuada fames.
+                    </p>
+                    <div class="testimonial__card-rating">
+                        
+                    </div>
                 </div>
-                <div class="about__card">
-                
+                <div class="testimonial__card">
+                    <img src="assets/img/testimonial5.jpg" alt="" class="testimonial__card-img">
+                    <p class="testimonial__card-description">
+                        Habitasse platea dictumst quisque sagittis purus sit amet. Pharetra convallis posuere morbi leo urna molestie at elementum.
+                    </p>
+                    <div class="testimonial__card-rating">
+                        
+                    </div>
                 </div>
             </div>
 
@@ -330,17 +468,17 @@
             <h1 class="section__title">
                 Fun facts
             </h1>
-            <div class="about__facts-container">
-                <div class="about__card">
+            <div class="facts__container">
+                <div class="facts__card">
 
                 </div>
-                <div class="about__card">
+                <div class="facts__card">
                     
                 </div>
-                <div class="about__card">
+                <div class="facts__card">
                     
                 </div>
-                <div class="about__card">
+                <div class="facts__card">
                     
                 </div>
             </div>
@@ -367,22 +505,88 @@
             </h1>
             <div class="blog__container">
                 <div class="blog__card">
-                    <img src="" alt="" class="blog__img">
+                    <img src="" alt="" class="blog__card-img">
+                    <div class="blog__card-data">
+                        <span class="blog__card-date">
+                            11 Apr. 2022
+                        </span>
+                        <h3 class="blog__card-title">
+                            Women in web design: how to achieve success
+                        </h3>
+                        <p class="blog__card-description">
+                            Eget lorem dolor sed viverra ipsum. Amet dictum sit amet justo. Leo duis ut diam quam nulla. Sapien et ligula ullamcorper malesuada proin. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Diam vel quam elementum pulvinar etiam non quam. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Convallis aenean et tortor at risus viverra. Ultrices dui sapien eget mi proin.
+                        </p>
+                    </div>
                 </div>
                 <div class="blog__card">
-                    <img src="" alt="" class="blog__img">
+                    <img src="" alt="" class="blog__card-img">
+                    <div class="blog__card-data">
+                        <span class="blog__card-date">
+                            9 Apr. 2022
+                        </span>
+                        <h3 class="blog__card-title">
+                            The services provide for designs
+                        </h3>
+                        <p class="blog__card-description">
+                            Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Suscipit tellus mauris a diam maecenas. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Cursus risus at ultrices mi tempus imperdiet nulla. Odio aenean sed adipiscing diam donec adipiscing. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                        </p>
+                    </div>
                 </div>
                 <div class="blog__card">
-                    <img src="" alt="" class="blog__img">
+                    <img src="" alt="" class="blog__card-img">
+                    <div class="blog__card-data">
+                        <span class="blog__card-date">
+                            5 Mar. 2022
+                        </span>
+                        <h3 class="blog__card-title">
+                            Mobile app landing design & app mantain
+                        </h3>
+                        <p class="blog__card-description">
+                            Tincidunt ornare massa eget egestas purus viverra accumsan in. Accumsan in nisl nisi scelerisque. Posuere ac ut consequat semper. Tincidunt eget nullam non nisi est sit amet facilisis magna. Pretium viverra suspendisse potenti nullam. Lobortis mattis aliquam faucibus purus in massa tempor nec.
+                        </p>
+                    </div>
                 </div>
                 <div class="blog__card">
-                    <img src="" alt="" class="blog__img">
+                    <img src="" alt="" class="blog__card-img">
+                    <div class="blog__card-data">
+                        <span class="blog__card-date">
+                            4 Jan. 2022
+                        </span>
+                        <h3 class="blog__card-title">
+                            How to work better: efficiency tools every logo designer needs
+                        </h3>
+                        <p class="blog__card-description">
+                            Commodo nulla facilisi nullam vehicula ipsum a arcu. Dui nunc mattis enim ut tellus. Quam id leo in vitae turpis. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Tristique senectus et netus et malesuada fames ac turpis. Lorem donec massa sapien faucibus et molestie ac. Amet cursus sit amet dictum sit amet justo. Aenean sed adipiscing diam donec adipiscing tristique risus.
+                        </p>
+                    </div>
                 </div>
                 <div class="blog__card">
-                    <img src="" alt="" class="blog__img">
+                    <img src="" alt="" class="blog__card-img">
+                    <div class="blog__card-data">
+                        <span class="blog__card-date">
+                            30 Dec. 2021
+                        </span>
+                        <h3 class="blog__card-title">
+                            Why can hill planet help you in the development of your website?
+                        </h3>
+                        <p class="blog__card-description">
+                            Nunc lobortis mattis aliquam faucibus purus in massa tempor. Turpis cursus in hac habitasse platea. Urna neque viverra justo nec ultrices. Risus viverra adipiscing at in tellus. Massa eget egestas purus viverra accumsan in nisl. Integer vitae justo eget magna fermentum iaculis eu. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vitae tortor condimentum lacinia quis.
+                        </p>
+                    </div>
                 </div>
                 <div class="blog__card">
-                    <img src="" alt="" class="blog__img">
+                    <img src="" alt="" class="blog__card-img">
+                    <div class="blog__card-data">
+                        <span class="blog__card-date">
+                            11 Nov. 2021
+                        </span>
+                        <h3 class="blog__card-title">
+                            30 beautiful google fonts for your website
+                        </h3>
+                        <p class="blog__card-description">
+                            Ullamcorper morbi tincidunt ornare massa. Consectetur libero id faucibus nisl tincidunt eget. Vitae turpis massa sed elementum tempus egestas. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Massa tincidunt dui ut ornare lectus sit amet. Id ornare arcu odio ut sem nulla pharetra diam sit.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -396,25 +600,91 @@
                 My contact
             </h1>
             <div class="contact__container">
-                <div class="contact__form">
-
+                <div class="contact__content">
+                    <h3 class="contact__title">
+                        Contact me
+                    </h3>
+                    <form action="#" class="contact__form">
+                        <div class="contact__input-group">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="email" placeholder="Email" class="contact__input">
+                        </div>
+                        <input type="text" placeholder="Subject" class="contact__input">
+                        <textarea name="" placeholder="Message" class="contact__input contact__input--textarea"></textarea>
+                        <button class="button contact__button" type="submit">Send message</button>
+                    </form>
                 </div>
-                <div class="contact__data">
-
+                <div class="contact__content">
+                    <h3 class="contact__title">
+                        Contact info
+                    </h3>
+                    <div class="contact__data">
+                        <p class="contact__description">
+                            Condimentum lacinia quis vel eros donec ac odio tempor. Vulputate mi sit amet mauris commodo quis imperdiet.
+                        </p>
+                        <div class="contact__details">
+                            <div class="contact__information">
+                                <i class="fa-solid fa-user-tie-hair contact__information-icon"></i>
+                                <div class="contact__information-box">
+                                    <h5 class="contact__information-title">
+                                        Name
+                                    </h5>
+                                    <p class="contact__information-description">
+                                        John Doe
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact__information">
+                                <i class="fa-solid fa-location-dot contact__information-icon"></i>
+                                <div class="contact__information-box">
+                                    <h5 class="contact__information-title">
+                                        Location
+                                    </h5>
+                                    <p class="contact__information-description">
+                                        4155 Mann Island, London, United Kingdom
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact__information">
+                                <i class="fa-solid fa-phone contact__information-icon"></i>
+                                <div class="contact__information-box">
+                                    <h5 class="contact__information-title">
+                                        Call me
+                                    </h5>
+                                    <p class="contact__information-description">
+                                        +32 123 412 512
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact__information">
+                                <i class="fa-solid fa-envelope contact__information-icon"></i>
+                                <div class="contact__information-box">
+                                    <h5 class="contact__information-title">
+                                        Email me
+                                    </h5>
+                                    <p class="contact__information-description">
+                                        johndoe@mail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="contact__map">
-
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8786.976019558238!2d-0.13767495430763346!3d51.50166025841447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1spl!2spl!4v1649705729714!5m2!1spl!2spl" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <footer class="footer">
                 <p class="footer__copy">
-
+                    Copyright&#169; Dariusz Gawron. All rights reserved.
                 </p>
             </footer>
         </section>
 
     </main>
 
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
@@ -425,19 +695,10 @@
 <i class="fa-brands fa-linkedin"></i>
 <i class="fa-brands fa-github-square"></i>
 <i class="fa-brands fa-instagram-square"></i>
-<i class="fa-solid fa-download"></i>
 
 
 
-<i class="fa-solid fa-laptop-code"></i>
-<i class="fa-solid fa-palette"></i>
-<i class="fa-solid fa-object-ungroup"></i>
-<i class="fa-light fa-object-ungroup"></i>
-<i class="fa-light fa-object-group"></i>
-<i class="fa-solid fa-radiation"></i>
-<i class="fa-solid fa-code"></i>
-<i class="fa-solid fa-arrows-up-down-left-right"></i>
-<i class="fa-solid fa-dharmachakra"></i>
+
 
 <i class="fa-solid fa-star"></i>
 
@@ -446,5 +707,3 @@
 <i class="fa-solid fa-user-secret"></i>
 <i class="fa-solid fa-user-tie"></i>
 <i class="fa-solid fa-user-tie-hair"></i>
-<i class="fa-solid fa-phone"></i>
-<i class="fa-solid fa-envelope"></i>
