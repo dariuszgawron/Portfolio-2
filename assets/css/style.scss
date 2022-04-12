@@ -4,3 +4,266 @@
 /* text-color-normal: #888 */
 /* text-color: #000 */
 /* scrollbar: #888 */
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+// VARIABLES CSS
+:root {
+    // FONTS
+    --font-family: 'Lato',sans-serif;
+    --font-size-1: ;
+    --font-size-2: ;
+    --font-size-3: ;
+    --font-size-4: ;
+    --font-size-5: ;
+    --font-size-6: ;
+    --font-size-7: ;
+    --font-weight-bold: 700;
+
+    // COLORS
+    --primary-color: #ff651c;
+    --background-color-primary: #eee;
+    --background-color-secondary: #fff;
+    --text-color-primary: #000;
+    --text-color-secondary: #888;
+    --shadow-color: #888;
+}
+
+// GENERAL STYLES & RESETS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color-primary);
+    color: var(--text-color-secondary);
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--font-family);
+    font-size: var(--font-size-5);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+// COMMON CLASSES
+.container {
+
+}
+
+.section {
+
+    &__title {
+
+    }
+
+    &__subtitle {
+        
+    }
+}
+
+.button {
+
+}
+
+// HEADER
+.header {
+
+}
+
+// HOME
+.home {
+
+}
+
+// ABOUT
+.about {
+
+}
+
+// RESUME
+.resume {
+
+}
+
+// SKILLS
+.skills {
+
+}
+
+// SERVICES
+.services {
+
+    &__description {
+
+    }
+
+    &__container {
+
+    }
+
+    &__card {
+
+        &-icon {
+
+        }
+
+        &-title {
+
+        }
+
+        &-description {
+
+        }
+    }
+}
+
+// TESTIMONIAL
+.testimonial {
+
+    &__container {
+
+    }
+
+    &__card {
+
+        &-img {
+
+        }
+
+        &-description {
+
+        }
+
+        &-rating {
+
+        }
+    }
+}
+
+// FUN FACT
+.facts {
+
+}
+
+
+// PORTFOLIO
+.portfolio {
+
+    &__filters {
+
+    }
+
+    &__container {
+
+    }
+
+    &__card {
+
+        &-img {
+
+        }
+
+        &-overlay {
+
+        }
+
+        &-title {
+
+        }
+    }
+}
+
+
+// BLOG
+.blog {
+
+    &__container {
+
+    }
+
+    &__card {
+
+        &-cover {
+
+        }
+
+        &-img {
+
+        }
+
+        &-data {
+
+        }
+
+        &-date {
+
+        }
+
+        &-title {
+
+        }
+
+        &-description {
+
+        }
+    }
+}
+
+// CONTACT
+.contact {
+
+    &__container {
+
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+
+    }
+
+    &__form {
+
+    }
+}
+
+// FOOTER
+.footer {
+
+    &__copy {
+
+    }
+}
