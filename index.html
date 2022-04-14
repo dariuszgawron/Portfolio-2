@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,15 @@
 
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Document</title>
 </head>
+
 <body class="body">
     <!-- HEADER -->
     <header class="header">
@@ -23,7 +25,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__list-item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link nav__link--active">
                             <i class="fa-solid fa-house-user"></i>
                         </a>
                     </li>
@@ -55,7 +57,7 @@
     <!-- MAIN -->
     <main class="main">
         <!-- HOME -->
-        <section class="home container section section--active">
+        <section class="home container section">
             <div class="home__container">
                 <img src="assets/img/profile.jpg" alt="" class="home__img">
                 <div class="home__data">
@@ -88,8 +90,12 @@
                         </a>
                     </ul>
                     <p class="home__description">
-                        Non consectetur a erat nam at. Dictum sit amet justo donec enim diam vulputate ut. Sed arcu non odio euismod lacinia at quis risus. Purus sit amet volutpat consequat mauris nunc. Sed ullamcorper morbi tincidunt ornare massa eget. Integer vitae justo eget magna fermentum iaculis eu. Fermentum leo vel orci porta non. Fermentum posuere urna nec tincidunt praesent. Enim sit amet venenatis urna. Morbi tristique senectus et netus et malesuada fames. 
-                    </p>    
+                        Non consectetur a erat nam at. Dictum sit amet justo donec enim diam vulputate ut. Sed arcu non
+                        odio euismod lacinia at quis risus. Purus sit amet volutpat consequat mauris nunc. Sed
+                        ullamcorper morbi tincidunt ornare massa eget. Integer vitae justo eget magna fermentum iaculis
+                        eu. Fermentum leo vel orci porta non. Fermentum posuere urna nec tincidunt praesent. Enim sit
+                        amet venenatis urna. Morbi tristique senectus et netus et malesuada fames.
+                    </p>
                     <div class="home__button-group">
                         <a href="#contact" class="button home__button">
                             Hire me
@@ -103,27 +109,30 @@
         </section>
 
         <!-- ABOUT -->
-        <section class="about container section">
-            <h2 class="section__subtitle">
+        <section class="about container section  section--active">
+            <h2 class="section__subtitle section__subtitle--center">
                 My intro
             </h2>
-            <h1 class="section__title">
-                About me
+            <h1 class="section__title section__title--center">
+                About <span class="section__title--primary">me</span>
             </h1>
             <div class="about__container">
                 <img src="assets/img/profile.jpg" alt="" class="about__img">
                 <div class="about__data">
                     <h4 class="about__subtitle">
-                        Who am i?
+                        Who am <span class="about__subtitle--primary">i ?</span>
                     </h4>
                     <h3 class="about__title">
-                        I'm John Doe, a visual UI/UX designer and web developer
+                        I'm John Doe, a visual <span class="about__title--primary">UI/UX designer</span> and <span
+                            class="about__title--primary">web developer</span>
                     </h3>
                     <p class="about__description">
-                        Pellentesque habitant morbi tristique senectus. Sed arcu non odio euismod lacinia. Turpis in eu mi bibendum. Lorem ipsum dolor sit amet consectetur. Ullamcorper malesuada proin libero nunc. Congue eu consequat ac felis donec et odio pellentesque diam.
+                        Pellentesque habitant morbi tristique senectus. Sed arcu non odio euismod lacinia. Turpis in eu
+                        mi bibendum. Lorem ipsum dolor sit amet consectetur. Ullamcorper malesuada proin libero nunc.
+                        Congue eu consequat ac felis donec et odio pellentesque diam.
                     </p>
                     <h3 class="about__title">
-                        Personal informations
+                        Personal <span class="about__title--primary">informations</span>
                     </h3>
                     <div class="about-information__container">
                         <div class="about-information__content">
@@ -172,47 +181,58 @@
                         </div>
                     </div>
                     <button class="button about__button">
-                        Download CV 
+                        Download CV
                         <i class="fa-solid fa-download button__icon"></i>
                     </button>
-                    <ul class="about-social__list">
-                        <li class="about-social__list-item">
-                            <a href="#" class="about-social__link">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="about-social-link">
-                                <i class="fa-brands fa-facebook-square"></i>
-                            </a>
-                            <a href="#" class="about-social-link">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="about-social-link">
-                                <i class="fa-brands fa-github-square"></i>
-                            </a>
-                            <a href="#" class="about-social-link">
-                                <i class="fa-brands fa-instagram-square"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="about-social">
+                        <ul class="about-social__list">
+                            <li class="about-social__list-item">
+                                <a href="#" class="about-social__link">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="about-social__list-item">
+                                <a href="#" class="about-social__link">
+                                    <i class="fa-brands fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li class="about-social__list-item">
+                                <a href="#" class="about-social__link">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="about-social__list-item">
+                                <a href="#" class="about-social__link">
+                                    <i class="fa-brands fa-github-square"></i>
+                                </a>
+                            </li>
+                            <li class="about-social__list-item">
+                                <a href="#" class="about-social__link">
+                                    <i class="fa-brands fa-instagram-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
 
             <!-- RESUME -->
-            <h2 class="section__subtitle">
+            <h2 class="section__subtitle section__subtitle--center">
                 Check out my resume
             </h2>
-            <h1 class="section__title">
-                My resume
+            <h1 class="section__title section__title--center">
+                My <span class="section__title--primary">resume</span>
             </h1>
             <div class="resume__container">
                 <div class="resume__content">
-                    <h3 class="resume__title">
+                    <h3 class="resume__title resume__title--center">
                         Education
                     </h3>
                     <div class="resume__group">
                         <div class="resume__card">
                             <span class="resume__card-tag">
-                                
+
                             </span>
                             <h4 class="resume__card-title">
                                 Diploma in web design
@@ -221,12 +241,13 @@
                                 Oxford University / 2013 - 2014
                             </h5>
                             <p class="resume__card-description">
-                                Porttitor eget dolor morbi non arcu risus. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus.
+                                Porttitor eget dolor morbi non arcu risus. Faucibus ornare suspendisse sed nisi lacus
+                                sed viverra tellus.
                             </p>
                         </div>
                         <div class="resume__card">
                             <span class="resume__card-tag">
-    
+
                             </span>
                             <h4 class="resume__card-title">
                                 Master of Science in Information Technology
@@ -235,12 +256,13 @@
                                 Oxford University / 2011 - 2013
                             </h5>
                             <p class="resume__card-description">
-                                Dui sapien eget mi proin sed libero enim sed faucibus. Senectus et netus et malesuada. Ornare arcu dui vivamus arcu felis.
+                                Dui sapien eget mi proin sed libero enim sed faucibus. Senectus et netus et malesuada.
+                                Ornare arcu dui vivamus arcu felis.
                             </p>
                         </div>
                         <div class="resume__card">
                             <span class="resume__card-tag">
-                                
+
                             </span>
                             <h4 class="resume__card-title">
                                 Bachelor of Science in Information Technology
@@ -249,7 +271,8 @@
                                 Oxford University / 2008 - 2011
                             </h5>
                             <p class="resume__card-description">
-                                Ac odio tempor orci dapibus ultrices. Faucibus in ornare quam viverra orci sagittis eu volutpat odio.
+                                Ac odio tempor orci dapibus ultrices. Faucibus in ornare quam viverra orci sagittis eu
+                                volutpat odio.
                             </p>
                         </div>
                     </div>
@@ -261,7 +284,7 @@
                     <div class="resume__group">
                         <div class="resume__card">
                             <span class="resume__card-tag">
-                                
+
                             </span>
                             <h4 class="resume__card-title">
                                 Lead UI/UX designer
@@ -275,7 +298,7 @@
                         </div>
                         <div class="resume__card">
                             <span class="resume__card-tag">
-                                
+
                             </span>
                             <h4 class="resume__card-title">
                                 Senior UI/UX designer
@@ -284,12 +307,13 @@
                                 Google / 2017 - 2019
                             </h5>
                             <p class="resume__card-description">
-                                Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Posuere urna nec tincidunt praesent semper feugiat nibh.
+                                Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Posuere urna nec
+                                tincidunt praesent semper feugiat nibh.
                             </p>
                         </div>
                         <div class="resume__card">
                             <span class="resume__card-tag">
-                                
+
                             </span>
                             <h4 class="resume__card-title">
                                 Junior UI/UX designer
@@ -298,7 +322,8 @@
                                 Twitter / 2014 - 2017
                             </h5>
                             <p class="resume__card-description">
-                                A diam maecenas sed enim ut sem viverra aliquet eget. Condimentum mattis pellentesque id nibh tortor id.
+                                A diam maecenas sed enim ut sem viverra aliquet eget. Condimentum mattis pellentesque id
+                                nibh tortor id.
                             </p>
                         </div>
                     </div>
@@ -306,11 +331,11 @@
             </div>
 
             <!-- SKILLS -->
-            <h2 class="section__subititle">
+            <h2 class="section__subtitle section__subtitle--center">
                 My level of knowledge in some tools
             </h2>
-            <h1 class="section__title">
-                My skills
+            <h1 class="section__title section__title--center">
+                My <span class="section__title--primary">skills</span>
             </h1>
             <div class="skills__container">
                 <div class="skills__content">
@@ -372,7 +397,7 @@
                 </div>
                 <div class="skills__content">
                     <h3 class="skills__title">
-                        Coding <span class="skills__title--primary">skills</span> 
+                        Coding <span class="skills__title--primary">skills</span>
                     </h3>
                     <div class="skills__group">
                         <div class="skills__data">
@@ -430,14 +455,15 @@
             </div>
 
             <!-- SERVICES -->
-            <h2 class="section__subtitle">
+            <h2 class="section__subtitle section__subtitle--center">
                 Services i offer to my clients
             </h2>
-            <h1 class="section__title">
-                My services
+            <h1 class="section__title section__title--center">
+                My <span class="section__title--primary">services</span>
             </h1>
             <p class="services__description">
-                Fames ac turpis egestas sed tempus urna et pharetra. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Sollicitudin tempor id eu nisl nunc. 
+                Fames ac turpis egestas sed tempus urna et pharetra. Gravida dictum fusce ut placerat orci nulla
+                pellentesque dignissim. Sollicitudin tempor id eu nisl nunc.
             </p>
             <div class="services__container">
                 <div class="services__card">
@@ -515,17 +541,18 @@
             </div>
 
             <!-- TESTIMONIAL -->
-            <h2 class="section__subtitle">
+            <h2 class="section__subtitle section__subtitle--center">
                 What our clients say
             </h2>
-            <h1 class="section__title">
-                My testimonial
+            <h1 class="section__title section__title--center">
+                My <span class="section__title--primary">testimonial</span>
             </h1>
             <div class="testimonial__container">
                 <div class="testimonial__card">
                     <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__card-img">
                     <p class="testimonial__card-description">
-                        Tempus imperdiet nulla malesuada pellentesque. At tempor commodo ullamcorper a lacus vestibulum sed arcu.
+                        Tempus imperdiet nulla malesuada pellentesque. At tempor commodo ullamcorper a lacus vestibulum
+                        sed arcu.
                     </p>
                     <div class="testimonial__card-rating">
 
@@ -537,16 +564,17 @@
                         Imperdiet dui accumsan sit amet nulla. Hac habitasse platea dictumst quisque sagittis purus sit.
                     </p>
                     <div class="testimonial__card-rating">
-                        
+
                     </div>
                 </div>
                 <div class="testimonial__card">
                     <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__card-img">
                     <p class="testimonial__card-description">
-                        Elementum nibh tellus molestie nunc non blandit massa enim nec. Tellus rutrum tellus pellentesque eu.
+                        Elementum nibh tellus molestie nunc non blandit massa enim nec. Tellus rutrum tellus
+                        pellentesque eu.
                     </p>
                     <div class="testimonial__card-rating">
-                        
+
                     </div>
                 </div>
                 <div class="testimonial__card">
@@ -555,39 +583,40 @@
                         In est ante in nibh mauris. Tristique senectus et netus et malesuada fames.
                     </p>
                     <div class="testimonial__card-rating">
-                        
+
                     </div>
                 </div>
                 <div class="testimonial__card">
                     <img src="assets/img/testimonial5.jpg" alt="" class="testimonial__card-img">
                     <p class="testimonial__card-description">
-                        Habitasse platea dictumst quisque sagittis purus sit amet. Pharetra convallis posuere morbi leo urna molestie at elementum.
+                        Habitasse platea dictumst quisque sagittis purus sit amet. Pharetra convallis posuere morbi leo
+                        urna molestie at elementum.
                     </p>
                     <div class="testimonial__card-rating">
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- FUN FACTS -->
-            <h2 class="section__subtitle">
+            <h2 class="section__subtitle section__subtitle--center">
                 This are my strongest sides
             </h2>
-            <h1 class="section__title">
-                Fun facts
+            <h1 class="section__title section__title--center">
+                Fun <span class="section__title--primary">facts</span>
             </h1>
             <div class="facts__container">
                 <div class="facts__card">
 
                 </div>
                 <div class="facts__card">
-                    
+
                 </div>
                 <div class="facts__card">
-                    
+
                 </div>
                 <div class="facts__card">
-                    
+
                 </div>
             </div>
         </section>
@@ -742,7 +771,11 @@
                             Women in web design: how to achieve success
                         </h3>
                         <p class="blog__card-description">
-                            Eget lorem dolor sed viverra ipsum. Amet dictum sit amet justo. Leo duis ut diam quam nulla. Sapien et ligula ullamcorper malesuada proin. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Diam vel quam elementum pulvinar etiam non quam. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Convallis aenean et tortor at risus viverra. Ultrices dui sapien eget mi proin.
+                            Eget lorem dolor sed viverra ipsum. Amet dictum sit amet justo. Leo duis ut diam quam nulla.
+                            Sapien et ligula ullamcorper malesuada proin. Sollicitudin tempor id eu nisl nunc mi ipsum
+                            faucibus vitae. Diam vel quam elementum pulvinar etiam non quam. Lectus proin nibh nisl
+                            condimentum id venenatis a condimentum vitae. Convallis aenean et tortor at risus viverra.
+                            Ultrices dui sapien eget mi proin.
                         </p>
                     </div>
                 </div>
@@ -758,7 +791,11 @@
                             The services provide for designs
                         </h3>
                         <p class="blog__card-description">
-                            Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Suscipit tellus mauris a diam maecenas. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Cursus risus at ultrices mi tempus imperdiet nulla. Odio aenean sed adipiscing diam donec adipiscing. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                            Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Suscipit tellus mauris a
+                            diam maecenas. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
+                            Cursus risus at ultrices mi tempus imperdiet nulla. Odio aenean sed adipiscing diam donec
+                            adipiscing. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium
+                            vulputate.
                         </p>
                     </div>
                 </div>
@@ -774,7 +811,10 @@
                             Mobile app landing design & app mantain
                         </h3>
                         <p class="blog__card-description">
-                            Tincidunt ornare massa eget egestas purus viverra accumsan in. Accumsan in nisl nisi scelerisque. Posuere ac ut consequat semper. Tincidunt eget nullam non nisi est sit amet facilisis magna. Pretium viverra suspendisse potenti nullam. Lobortis mattis aliquam faucibus purus in massa tempor nec.
+                            Tincidunt ornare massa eget egestas purus viverra accumsan in. Accumsan in nisl nisi
+                            scelerisque. Posuere ac ut consequat semper. Tincidunt eget nullam non nisi est sit amet
+                            facilisis magna. Pretium viverra suspendisse potenti nullam. Lobortis mattis aliquam
+                            faucibus purus in massa tempor nec.
                         </p>
                     </div>
                 </div>
@@ -790,7 +830,11 @@
                             How to work better: efficiency tools every logo designer needs
                         </h3>
                         <p class="blog__card-description">
-                            Commodo nulla facilisi nullam vehicula ipsum a arcu. Dui nunc mattis enim ut tellus. Quam id leo in vitae turpis. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Tristique senectus et netus et malesuada fames ac turpis. Lorem donec massa sapien faucibus et molestie ac. Amet cursus sit amet dictum sit amet justo. Aenean sed adipiscing diam donec adipiscing tristique risus.
+                            Commodo nulla facilisi nullam vehicula ipsum a arcu. Dui nunc mattis enim ut tellus. Quam id
+                            leo in vitae turpis. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.
+                            Tristique senectus et netus et malesuada fames ac turpis. Lorem donec massa sapien faucibus
+                            et molestie ac. Amet cursus sit amet dictum sit amet justo. Aenean sed adipiscing diam donec
+                            adipiscing tristique risus.
                         </p>
                     </div>
                 </div>
@@ -806,7 +850,12 @@
                             Why can hill planet help you in the development of your website?
                         </h3>
                         <p class="blog__card-description">
-                            Nunc lobortis mattis aliquam faucibus purus in massa tempor. Turpis cursus in hac habitasse platea. Urna neque viverra justo nec ultrices. Risus viverra adipiscing at in tellus. Massa eget egestas purus viverra accumsan in nisl. Integer vitae justo eget magna fermentum iaculis eu. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vitae tortor condimentum lacinia quis.
+                            Nunc lobortis mattis aliquam faucibus purus in massa tempor. Turpis cursus in hac habitasse
+                            platea. Urna neque viverra justo nec ultrices. Risus viverra adipiscing at in tellus. Massa
+                            eget egestas purus viverra accumsan in nisl. Integer vitae justo eget magna fermentum
+                            iaculis eu. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus.
+                            Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vitae tortor
+                            condimentum lacinia quis.
                         </p>
                     </div>
                 </div>
@@ -822,7 +871,11 @@
                             30 beautiful google fonts for your website
                         </h3>
                         <p class="blog__card-description">
-                            Ullamcorper morbi tincidunt ornare massa. Consectetur libero id faucibus nisl tincidunt eget. Vitae turpis massa sed elementum tempus egestas. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Massa tincidunt dui ut ornare lectus sit amet. Id ornare arcu odio ut sem nulla pharetra diam sit.
+                            Ullamcorper morbi tincidunt ornare massa. Consectetur libero id faucibus nisl tincidunt
+                            eget. Vitae turpis massa sed elementum tempus egestas. Suspendisse interdum consectetur
+                            libero id faucibus nisl tincidunt eget. Natoque penatibus et magnis dis parturient montes
+                            nascetur ridiculus mus. Massa tincidunt dui ut ornare lectus sit amet. Id ornare arcu odio
+                            ut sem nulla pharetra diam sit.
                         </p>
                     </div>
                 </div>
@@ -848,7 +901,8 @@
                             <input type="email" placeholder="Email" class="contact__input">
                         </div>
                         <input type="text" placeholder="Subject" class="contact__input">
-                        <textarea name="" placeholder="Message" class="contact__input contact__input--textarea"></textarea>
+                        <textarea name="" placeholder="Message"
+                            class="contact__input contact__input--textarea"></textarea>
                         <button class="button contact__button" type="submit">Send message</button>
                     </form>
                 </div>
@@ -858,7 +912,8 @@
                     </h3>
                     <div class="contact__data">
                         <p class="contact__description">
-                            Condimentum lacinia quis vel eros donec ac odio tempor. Vulputate mi sit amet mauris commodo quis imperdiet.
+                            Condimentum lacinia quis vel eros donec ac odio tempor. Vulputate mi sit amet mauris commodo
+                            quis imperdiet.
                         </p>
                         <div class="contact__details">
                             <div class="contact__information">
@@ -910,7 +965,10 @@
                 </div>
             </div>
             <div class="contact__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8786.976019558238!2d-0.13767495430763346!3d51.50166025841447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1spl!2spl!4v1649705729714!5m2!1spl!2spl" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8786.976019558238!2d-0.13767495430763346!3d51.50166025841447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1spl!2spl!4v1649705729714!5m2!1spl!2spl"
+                    width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <footer class="footer">
                 <p class="footer__copy">
@@ -925,6 +983,7 @@
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
 
 <!-- ICONS -->
