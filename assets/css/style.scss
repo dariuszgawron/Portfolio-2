@@ -66,6 +66,8 @@ html {
 body {
     background-color: var(--background-color-primary);
     color: var(--text-color-medium);
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 body,
@@ -173,6 +175,7 @@ textarea {
     border: 2px solid var(--primary-color);
     background-color: var(--primary-color);
     color: var(--text-color-light);
+    letter-spacing: .05rem;
     border-radius: .3rem;
     transition: .5s;
 
@@ -215,8 +218,15 @@ textarea {
         align-items: center;
 
         &-item {
-
             font-size: var(--font-size-2);
+
+            @media screen and (min-width: 769px) {
+                font-size: var(--font-size-4);
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            flex-direction: column;
         }
     }
 
@@ -267,13 +277,23 @@ textarea {
         align-items: center;
     }
 
-    &__title-group {
+    &__title-container {
         margin-bottom: 1.5rem;
-        text-align: center;
+        height: calc(var(--font-size-2) + 1.5rem);
+        overflow: hidden;
+    }
+
+    &__title-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: scrollTitle 3s 2s ease-in-out infinite alternate;
     }
 
     &__title {
-
+        font-size: var(--font-size-2);
+        line-height: calc(var(--font-size-2) + 1.5rem);
+        color: var(--primary-color);
     }
 
     &__social {
@@ -399,6 +419,11 @@ textarea {
         &__link {
             font-size: var(--font-size-2);
             color: var(--text-color-dark);
+            transition: .4s;
+
+            &:hover {
+                color: var(--primary-color);
+            }
         }
     }
 }
@@ -555,6 +580,7 @@ textarea {
             margin-bottom: 1.5rem;
             font-size: calc(var(--font-size-1) + .5rem);
             color: var(--text-color-dark);
+            animation: rotateIcon 4s linear infinite;
         }
 
         &-title {
@@ -632,7 +658,11 @@ textarea {
 .portfolio {
 
     &__filters {
-
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin-bottom: 1.5rem;
     }
 
     &__container {
@@ -729,8 +759,16 @@ textarea {
     }
 
     &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__inputs {
+        width: 100%;
         display: grid;
         row-gap: 1.4rem;
+        margin-bottom: 1.5rem;
     }
 
     &__input-group {
@@ -778,13 +816,13 @@ textarea {
 
         &-title {
             margin-bottom: .3rem;
-            font-size: var(--font-size-4);
+            font-size: var(--font-size-5);
             font-weight: var(--font-weight-bold);
             color: var(--text-color-dark);
         }
 
         &-description {
-            font-size: var(--font-size-4);
+            font-size: var(--font-size-5);
             color: var(--primary-color);
         }
     }
@@ -825,5 +863,34 @@ textarea {
         background-color: transparent;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+}
+
+
+// ANIMATIONS
+@keyframes scrollTitle {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(calc(0px - var(--font-size-2) - 1.5rem));
+    }
+    100% {
+        transform: translateY(calc(2 * (0px - var(--font-size-2) - 1.5rem)));
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        // transform: scale(1);
+        transform: rotateY(0) scale(1);
+    }
+    50% {
+        // transform: scale(1.2);
+        transform: rotateY(180deg) scale(1.1);
+    }
+    100% {
+        // transform: scale(1);
+        transform: rotateY(360deg) scale(1);
     }
 }

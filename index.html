@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -25,27 +23,27 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__list-item">
-                        <a href="#home" class="nav__link nav__link--active">
+                        <a href="#home" data-section="home" class="nav__link nav__link--active">
                             <i class="fa-solid fa-house-user"></i>
                         </a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="#about" class="nav__link">
+                        <a href="#about" data-section="about" class="nav__link">
                             <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="#portfolio" class="nav__link">
+                        <a href="#portfolio" data-section="portfolio" class="nav__link">
                             <i class="fa-solid fa-briefcase"></i>
                         </a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="#blog" class="nav__link">
+                        <a href="#blog" data-section="blog" class="nav__link">
                             <i class="fa-solid fa-blog"></i>
                         </a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="#contact" class="nav__link">
+                        <a href="#contact" data-section="contact" class="nav__link">
                             <i class="fa-solid fa-phone"></i>
                         </a>
                     </li>
@@ -57,7 +55,7 @@
     <!-- MAIN -->
     <main class="main">
         <!-- HOME -->
-        <section class="home container section">
+        <section class="home container section section--active" id="home">
             <div class="home__container">
                 <img src="assets/img/profile.jpg" alt="" class="home__img">
                 <div class="home__data">
@@ -67,10 +65,12 @@
                     <h1 class="section__title">
                         John Doe
                     </h1>
-                    <div class="home__title-group">
-                        <h3 class="home__title">Web developer</h3>
-                        <h3 class="home__title">UI - UX designer</h3>
-                        <h3 class="home__title">Software engineer</h3>
+                    <div class="home__title-container">
+                        <div class="home__title-content">
+                            <h3 class="home__title">Web developer</h3>
+                            <h3 class="home__title">UI - UX designer</h3>
+                            <h3 class="home__title">Software engineer</h3>
+                        </div>
                     </div>
                     <ul class="home__social">
                         <a href="#" class="home__social-link">
@@ -97,10 +97,10 @@
                         amet venenatis urna. Morbi tristique senectus et netus et malesuada fames.
                     </p>
                     <div class="home__button-group">
-                        <a href="#contact" class="button home__button">
+                        <a href="#contact" data-section="contact" class="button home__button">
                             Hire me
                         </a>
-                        <a href="#about" class="button home__button">
+                        <a href="#about" data-section="about" class="button home__button">
                             About me
                         </a>
                     </div>
@@ -109,7 +109,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section class="about container section">
+        <section class="about container section" id="about">
             <h2 class="section__subtitle section__subtitle--center">
                 My intro
             </h2>
@@ -485,7 +485,7 @@
                     </p>
                 </div>
                 <div class="services__card">
-                    <i class="fa-light fa-object-ungroup services__card-icon"></i>
+                    <i class="fa-solid fa-object-group services__card-icon"></i>
                     <h3 class="services__card-title services__card-title--primary">
                         Product design
                     </h3>
@@ -494,7 +494,7 @@
                     </p>
                 </div>
                 <div class="services__card">
-                    <i class="fa-light fa-object-group services__card-icon"></i>
+                    <i class="fa-solid fa-object-ungroup services__card-icon"></i>
                     <h3 class="services__card-title services__card-title--primary">
                         UI/UX design
                     </h3>
@@ -627,11 +627,11 @@
         </section>
 
         <!-- PORTFOLIO -->
-        <section class="portfolio container section">
-            <h2 class="section__subtitle">
+        <section class="portfolio container section" id="portfolio">
+            <h2 class="section__subtitle section__subtitle--center">
                 Showcasing some of my best work
             </h2>
-            <h1 class="section__title">
+            <h1 class="section__title section__title--center">
                 My <span class="section__title--primary">portfolio</span>
             </h1>
             <div class="portfolio__filters">
@@ -756,7 +756,7 @@
         </section>
 
         <!-- BLOG -->
-        <section class="blog container section">
+        <section class="blog container section" id="blog">
             <h2 class="section__subtitle section__subtitle--center">
                 Check out my latest blog posts
             </h2>
@@ -888,7 +888,7 @@
         </section>
 
         <!-- CONTACT -->
-        <section class="contact container section section--active">
+        <section class="contact container section" id="contact">
             <h2 class="section__subtitle section__subtitle--center">
                 Feel free to contact me anytimes
             </h2>
@@ -901,13 +901,15 @@
                         Contact me
                     </h3>
                     <form action="#" class="contact__form">
-                        <div class="contact__input-group">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="email" placeholder="Email" class="contact__input">
+                        <div class="contact__inputs">
+                            <div class="contact__input-group">
+                                <input type="text" placeholder="Name" class="contact__input">
+                                <input type="email" placeholder="Email" class="contact__input">
+                            </div>
+                            <input type="text" placeholder="Subject" class="contact__input">
+                            <textarea name="" placeholder="Message"
+                                class="contact__input contact__input--textarea"></textarea>
                         </div>
-                        <input type="text" placeholder="Subject" class="contact__input">
-                        <textarea name="" placeholder="Message"
-                            class="contact__input contact__input--textarea"></textarea>
                         <button class="button contact__button" type="submit">Send message</button>
                     </form>
                 </div>
@@ -922,7 +924,7 @@
                         </p>
                         <div class="contact__details">
                             <div class="contact__information">
-                                <i class="fa-solid fa-user-tie-hair contact__information-icon"></i>
+                                <i class="fa-solid fa-user-tie contact__information-icon"></i>
                                 <div class="contact__information-box">
                                     <h5 class="contact__information-title">
                                         Name
