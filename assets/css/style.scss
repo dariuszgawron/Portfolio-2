@@ -183,10 +183,17 @@ textarea {
     border-radius: .3rem;
     transition: .5s;
 
-    &:hover, &--active {
+    &:hover {
         background-color: var(--background-color-secondary);
         color: var(--text-color-dark);
-        box-shadow: 0 0 20px var(--shadow-color);
+        box-shadow: 0 0 15px var(--shadow-color);
+        transform: rotate(10deg);
+    }
+
+    &--active {
+        background-color: var(--background-color-secondary);
+        color: var(--text-color-dark);
+        box-shadow: 0 0 10px var(--shadow-color);
         transform: rotate(10deg);
     }
 }
@@ -690,15 +697,27 @@ textarea {
         }
 
         &-description {
+            margin-bottom: 1rem;
             text-align: center;
             font-size: var(--font-size-6);
             line-height: 160%;
         }
 
         &-rating {
-
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: .7rem;
+            font-size: var(--font-size-7);
+            color: var(--primary-color);
         }
     }
+}
+
+.swiper-testimonial {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 // FUN FACT
@@ -756,30 +775,127 @@ textarea {
 // PORTFOLIO
 .portfolio {
 
+
     &__filters {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: .5rem;
         margin-bottom: 1.5rem;
+
+        &-item {
+            
+        }
     }
 
     &__container {
+        display: grid;
 
+        @media screen and (min-width: 578px) {
+            grid-template-columns: repeat(2,1fr);
+            gap: 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @media screen and (min-width: 992px) {
+            grid-template-columns: repeat(4,1fr);
+        }
     }
 
     &__card {
+        position: relative;
+        width: 100%;
+        border-radius: .5rem;
+        overflow: hidden;
+        box-shadow: 0 0 10px var(--shadow-color);
 
         &-img {
-
+            height: 100%;
         }
 
         &-overlay {
-
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.73);
+            transition: .4s;
         }
 
         &-title {
+            font-size: var(--font-size-5);
+            color: var(--text-color-light);
+        }
 
+        &-button {
+            display: flex;
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            font-size: var(--font-size-6);
+
+            &:hover {
+                background-color: #000;
+
+            }
+        }
+
+        &:hover .portfolio__card-overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 1.5rem;
+        }
+    }
+
+    &__gallery {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.87);
+        color: var(--text-color-light);
+
+        &-header {
+            width: 100%;
+            height: 4rem;
+        }
+
+        &-content {
+            width: 100%;
+            height: calc(100vh - 8rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-image {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: .5rem;
+        }
+
+        &-footer {
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-title {
+            font-size: var(--font-size-6);
+            color: var(--text-color-light);
         }
     }
 }
