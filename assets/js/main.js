@@ -17,6 +17,44 @@ document.addEventListener("DOMContentLoaded", function(){
         changeActiveSection(sectionId);
 });
 
+// PORTFOLIO GALLERY
+const portfolioButtons = document.querySelectorAll('.portfolio__card-button');
+const portfolioGallery = document.getElementById('portfolio-gallery');
+const portfolioClose = document.getElementById('portfolio-gallery-close');
+const portfolioImage = document.getElementById('portfolio-gallery-image');
+const portfolioPage = document.getElementById('portfolio-gallery-page');
+const portfolioPrev = document.getElementById('portfolio-gallery-prev');
+const portfolioNext = document.getElementById('portfolio-gallery-next');
+const numberOfImages = portfolioButtons.length;
+let currentImage = 0;
+function openImage(index,total) {
+    portfolioPage.innerHTML = `${index} / ${total}`;
+    portfolioImage.src = portfolioButtons[index-1].parentNode.previousElementSibling.src;
+}
+// Open gallery
+portfolioButtons.forEach((portfolioButton, index) => {
+    portfolioButton.addEventListener('click', () => {
+        currentImage = index + 1;
+        openImage(currentImage,numberOfImages);
+        portfolioGallery.classList.add('portfolio__gallery--show');
+    })
+});
+// Close gallery
+portfolioClose.addEventListener('click', () => {
+    portfolioGallery.classList.remove('portfolio__gallery--show');
+});
+// Switch between images
+portfolioPrev.addEventListener('click', () => {
+    if(--currentImage<1) 
+        currentImage=numberOfImages;
+    openImage(currentImage,numberOfImages);
+});
+portfolioNext.addEventListener('click', () => {
+    if(++currentImage>numberOfImages) 
+        currentImage=1;
+    openImage(currentImage,numberOfImages);
+});
+
 // SWIPER JS
 const swiperTestimonial = new Swiper('.swiper-testimonial', {
     loop: true,
