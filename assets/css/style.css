@@ -63,7 +63,7 @@ body {
   background-color: var(--background-color-primary);
   color: var(--text-color-medium);
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 body,
@@ -115,7 +115,7 @@ textarea {
   z-index: 1;
   border-radius: 1rem;
   overflow: auto;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.87);
   -webkit-box-shadow: 0 0 20px var(--shadow-color);
           box-shadow: 0 0 20px var(--shadow-color);
   -webkit-transition: .5s;
@@ -223,6 +223,20 @@ textarea {
           transform: rotate(10deg);
 }
 
+.body__background {
+  position: absolute;
+  bottom: 40vh;
+  left: 12vw;
+  width: 120vh;
+  height: 120vh;
+  background-color: var(--primary-color);
+  -webkit-box-shadow: 0 0 20px var(--shadow-color);
+          box-shadow: 0 0 20px var(--shadow-color);
+  -webkit-transform: rotate(-45deg) translate(-50%, -50%);
+          transform: rotate(-45deg) translate(-50%, -50%);
+  z-index: -1;
+}
+
 .header {
   position: absolute;
   bottom: 0;
@@ -244,8 +258,6 @@ textarea {
   height: 100%;
   padding: 0 2rem;
   background-color: var(--background-color-secondary);
-  -webkit-box-shadow: 0 0 5px var(--shadow-color);
-          box-shadow: 0 0 5px var(--shadow-color);
 }
 
 .nav__menu {
@@ -268,8 +280,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .8rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -297,11 +311,63 @@ textarea {
 }
 
 .nav__link {
-  color: var(--text-color-medium);
+  position: relative;
+  color: var(--text-color-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  width: 60px;
+  aspect-ratio: 1/1;
+  background-color: var(--background-color-secondary);
+  border-radius: 50%;
+  z-index: 1;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.nav__link:hover .nav__link-tooltip {
+  visibility: visible;
 }
 
 .nav__link--active {
+  border: 5px solid var(--background-color-primary);
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link--active {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.nav__link-tooltip {
+  visibility: hidden;
+  position: absolute;
+  right: 119%;
+  padding: .5rem 1rem;
+  font-size: var(--font-size-5);
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border-radius: .5rem;
+  z-index: 10;
+}
+
+.nav__link-tooltip::after {
+  content: ' ';
+  position: absolute;
+  top: 25%;
+  left: 100%;
+  border: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--primary-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -963,6 +1029,7 @@ textarea {
   height: 100%;
   background-color: rgba(32, 32, 32, 0.87);
   color: var(--text-color-light);
+  z-index: 3;
 }
 
 .portfolio__gallery--show {

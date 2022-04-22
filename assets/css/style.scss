@@ -67,7 +67,7 @@ body {
     background-color: var(--background-color-primary);
     color: var(--text-color-medium);
     height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 body,
@@ -124,7 +124,9 @@ textarea {
     z-index: 1;
     border-radius: 1rem;
     overflow: auto;
-    background-color: #fff;
+    // background-color: var(--background-color-secondary);
+    background-color: rgba(255, 255, 255, 0.87);
+    // backdrop-filter: blur(8.7px);
     box-shadow: 0 0 20px var(--shadow-color);
     transition: .5s;
 
@@ -226,6 +228,19 @@ textarea {
     }
 }
 
+// BACKGROUND
+.body__background {
+    position: absolute;
+    bottom: 40vh;
+    left: 12vw;
+    width: 120vh;
+    height: 120vh;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--shadow-color);
+    transform: rotate(-45deg) translate(-50%,-50%);
+    z-index: -1;
+}
+
 // HEADER
 .header {
     position: absolute;
@@ -247,7 +262,6 @@ textarea {
     height: 100%;
     padding: 0 2rem;
     background-color: var(--background-color-secondary);
-    box-shadow: 0 0 5px var(--shadow-color);
 
     &__menu {
         height: 100%;
@@ -261,19 +275,13 @@ textarea {
     &__list {
         height: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: .8rem;
         align-items: center;
 
         &-item {
             font-size: var(--font-size-2);
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-            // font-size: 1.5rem;
-            // border: 3px solid gray;
-            // border-radius: 50%;
             // width: 100%;
-            // aspect-ratio: 1/1;
 
             @media screen and (min-width: 768px) {
                 font-size: var(--font-size-4);
@@ -288,10 +296,53 @@ textarea {
     }
 
     &__link {
-        color: var(--text-color-medium);
+        position: relative;
+        color: var(--text-color-dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        width: 60px;
+        aspect-ratio: 1/1;
+        background-color: var(--background-color-secondary);
+        border-radius: 50%;
+        z-index: 1;
+        transition: .4s;
+
+        &:hover .nav__link-tooltip {
+            visibility: visible;
+        }
 
         &--active {
+            border: 5px solid var(--background-color-primary);
             color: var(--primary-color);
+            // transform: translateY(-50%);
+
+            @media screen and (min-width: 768px) {
+                transform: translateX(-50%);
+            }
+        }
+
+        &-tooltip {
+            visibility: hidden;
+            position: absolute;
+            right: 119%;
+            padding: .5rem 1rem;
+            font-size: var(--font-size-5);
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            border-radius: .5rem;
+            z-index: 10;
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                top: 25%;
+                left: 100%;
+                border: 10px;
+                border-style: solid;
+                border-color: transparent transparent transparent var(--primary-color);
+            }
         }
     }
 
@@ -907,6 +958,7 @@ textarea {
         height: 100%;
         background-color: rgba(32, 32, 32, 0.87);
         color: var(--text-color-light);
+        z-index: 3;
 
         &--show {
             display: block;
