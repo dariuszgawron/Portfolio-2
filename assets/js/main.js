@@ -1,3 +1,9 @@
+// SKILLS BARS
+const skillsBars = document.querySelectorAll('.skills__progress-bar');
+skillsBars.forEach(skillBar => {
+    skillBar.style.width = skillBar.dataset.width;
+});
+
 // MENU & LINKS
 const navLinks = document.querySelectorAll('[data-section]');
 function changeActiveSection(sectionId) {
@@ -84,6 +90,8 @@ const mixitupPortfolio = mixitup('.portfolio__container',{
         target: '.portfolio__card'
     },
     animation: {
+        animateResizeContainer: false,
+        effects: 'fade stagger(100ms)',
         duration: 400
     }
 });
