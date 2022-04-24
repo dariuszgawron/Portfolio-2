@@ -1,3 +1,11 @@
+// LOADER
+const loader = document.getElementById('loader');
+onload = () => {
+    setTimeout(() => {
+        loader.classList.add('loader--hidden');
+    }, 2200);
+};
+
 // SKILLS BARS
 const skillsBars = document.querySelectorAll('.skills__progress-bar');
 skillsBars.forEach(skillBar => {
@@ -74,7 +82,7 @@ const swiperTestimonial = new Swiper('.swiper-testimonial', {
         576: {
             slidesPerView: 2
         },
-        768: {
+        992: {
             slidesPerView: 3
         }
     },
