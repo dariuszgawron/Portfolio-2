@@ -74,10 +74,6 @@ const swiperTestimonial = new Swiper('.swiper-testimonial', {
     loop: true,
     spaceBetween: 20,
     grabCursor: true,
-    // pagination: {
-    //     el: '.swiper-testimonial__pagination',
-    //     clickable: true
-    // },
     breakpoints: {
         576: {
             slidesPerView: 2
